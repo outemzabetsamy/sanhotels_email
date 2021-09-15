@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.sanhotels.email.entity.EmailTemplate;
 import com.sanhotels.email.entity.EmailToPost;
 import com.sanhotels.email.entity.MailResponse;
@@ -27,6 +27,7 @@ import com.sanhotels.email.service.EmailServiceSender;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/mail")
 public class EmailController {
 EmailService emailService;
