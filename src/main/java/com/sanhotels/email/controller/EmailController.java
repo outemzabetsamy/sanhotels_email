@@ -4,7 +4,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -62,11 +62,12 @@ public ResponseEntity<EmailToPost> addEmail(@RequestBody EmailToPost email){
 	URI location =ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(em.getIdEmail()).toUri();
 	return ResponseEntity.created(location).build();
 	}
+@Transactional
 @PutMapping(value="/edit")
 public void editTypeChambre(@RequestBody EmailToPost tc) {
 	emailService.editEmail(tc);
 }
-
+@Transactional
 @DeleteMapping(value="/delete/{id}")
 public void deleteTypeChambreById(@PathVariable Long id,@RequestParam("idhotel") Long idhotel) {
 	emailService.deleteById(id,idhotel);
