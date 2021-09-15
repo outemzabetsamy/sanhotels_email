@@ -22,7 +22,7 @@ spring:
         show-sql: true
     mail:
         host: smtp.gmail.com
-        password:${EMAILPASSWORD}
+        password: ${EMAILPASSWORD}
         port: 25
         properties:
             mail:
@@ -31,4 +31,4 @@ spring:
                     starttls:
                         enable: true
         protocol: smtp
-        username:${EMAILUSER}
+        username: ${EMAILUSER}
