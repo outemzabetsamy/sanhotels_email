@@ -89,7 +89,7 @@ public MailResponse sendEmail(@RequestBody EmailTemplate request) {
 	model.put("adresseHotel", request.getHotel().getAdresseHotel());
 	model.put("hotelName", request.getHotel().getNomHotel());
 	model.put("mailHotel", request.getHotel().getEmail());
-	model.put("idReservation", request.getReservation().getIdReservation());
+	//model.put("idReservation", request.getReservation().getIdReservation());
 	model.put("mailHotel", request.getHotel().getEmail());
 	
 	return emailSender.sendEmail(request, model);
