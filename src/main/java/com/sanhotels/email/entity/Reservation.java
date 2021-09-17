@@ -21,14 +21,14 @@ public class Reservation {
 	private Long idHotel;
 	private String username;
 	private Client client;
-	private String chambre;
+	private Chambre chambre;
 	public Reservation() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Reservation(Long idReservation, String typeReservation, String dateDebut, String datefin,
 			String etatReservation, int nbJours, Float montantSejour, UUID idFacture, Long idHotel, String username,
-			Client client, String chambre) {
+			Client client, Chambre chambre) {
 		super();
 		this.idReservation = idReservation;
 		this.typeReservation = typeReservation;
@@ -109,10 +109,10 @@ public class Reservation {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	public String getChambre() {
+	public Chambre getChambre() {
 		return chambre;
 	}
-	public void setChambre(String chambre) {
+	public void setChambre(Chambre chambre) {
 		this.chambre = chambre;
 	}
 	
